@@ -1,0 +1,35 @@
+/*
+Contabilice los votos de los candidatos a presidente de un país y muestre por pantalla el
+candidato ganador. Nota: Se realizará una muestra de 15 votantes. La cantidad de
+candidatos son 3
+*/
+import java.util.Scanner;
+
+class sondeo {
+    public static void main(String[] args) {
+        System.out.println("Bienvenidos a las elecciones de representantes del consejo estudiantil. A continuacion se le mostraran los candidatos para votar por algun candidato solo seleccione el numero del candidato: 1- Bramdon, 2-Sammuel, 3-Katherinne ");
+        int votosA=0, votosB=0, votosC=0;
+        Scanner Scanvotos = new Scanner(System.in);
+        for(int votantes=1; votantes<16; votantes++){
+           int votoPersona = Scanvotos.nextInt();
+           
+            switch(votoPersona){
+                
+                case 1:votosA++;System.out.println("votaste por bramdon");break;
+                case 2:votosB++;System.out.println("votaste por Katherinne");break;
+                case 3:votosC++;System.out.println("votaste por Sammuel");break;
+                default:System.out.println("opcion invalida");votantes--;break;
+            }
+        }
+    
+        if(votosA>votosB&&votosA>votosC){
+            System.out.println("El candidato ganador de las elecciones es bramdon");
+        }
+    
+        else if(votosB>votosA&&votosB>votosC){
+            System.out.println("El candidato ganador de las elecciones es Sammuel");
+        }
+    
+        else System.out.println("El candidato ganador de las elecciones es Katherinne");
+    }
+}

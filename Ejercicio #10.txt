@@ -1,0 +1,23 @@
+/*10.Una micro empresa desea calcular el total a pagar de cada empleado basado en lo siguiente: Todo trabajador recibe C$5,000.00 de salario base, más un bono de C$4,000.00 por ventas superiores o igual a C$60,000.00. Realice un programa que lea el total de ventas de c/u de los 10 trabajadores de la empresa, e imprima en pantalla el total a pagar a cada empleado (salario base + comisión).*/
+
+import java.util.Scanner; 
+class HelloWorld 
+{
+    public static void main(String[] args)
+    {
+        double TotalPago=0;
+        double Ventas=0;
+        Scanner ScaVentas = new Scanner(System.in);
+        for(int Empleado=1; Empleado<=10; Empleado++)
+        {
+        System.out.println("Ingrese las ventas totales de empleado:" + Empleado);
+        Ventas = ScaVentas.nextDouble();
+        if(Ventas>=60000)
+        {
+        TotalPago=9000; 
+        }
+        else TotalPago=5000;
+        System.out.println("El total del pago del trabajador#" + Empleado + " Es:" + TotalPago);
+        }
+    }
+}

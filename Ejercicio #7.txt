@@ -1,0 +1,40 @@
+/*
+El profesor de matemáticas desea conocer la cantidad de sus alumnos que no tienen
+derecho a realizar el examen final, para ello debemos basarnos en lo siguiente: Si el
+promedio de la suma de las 2 calificaciones obtenidas (teórico y práctico) es superior o igual
+a 70 pts, entonces estarán aprobados, de lo contrario reprobados. Realice un programa que
+lea las dos notas de lo 10 alumnos que tiene el profesor e imprima por pantalla la cantidad
+de alumnos que no tienen derecho a realizar el examen final.
+
+*/
+
+import java.util.Scanner;
+
+class HelloWorld {
+    public static void main(String[] args) {
+        
+        int alumno, notaPractica, notaTeorica, reprobados=0, notaFinal;
+        
+        Scanner ScanAlumnos = new Scanner(System.in);
+        
+        for(alumno=1; alumno<=10; alumno++){
+            
+        System.out.println("Ingrese la nota practica del alumno #" + alumno);
+        
+        notaPractica = ScanAlumnos.nextInt();
+         System.out.println("Ingrese la nota teorica del alumno # " + alumno);
+        
+        notaTeorica = ScanAlumnos.nextInt();
+            
+            notaFinal=(notaPractica+notaTeorica)/2;
+            
+            if(notaFinal<70){reprobados++;}
+            
+        }
+        
+        System.out.println("El total de alumnos reprobados es: " + reprobados);
+        System.out.println("____ sin derecho a examen final____");
+        
+       
+    }
+}

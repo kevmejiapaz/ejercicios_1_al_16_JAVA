@@ -1,0 +1,34 @@
+/*Una tienda desea registrar el monto total de ventas obtenidas en el día; para ello se
+almacenarán el total pagado de cada cliente. Realice un programa que lea los totales
+pagados de cada cliente, y al final imprima las ventas totales del día y el número de clientes
+atendidos. Nota: El programa preguntará por cada cliente si es el último del día, de ser no
+pedirá los datos del siguiente cliente, de ser si, no pedirá más datos.*/
+
+
+
+import java.util.Scanner;
+
+
+class HelloWorld {
+    public static void main(String[] args) {
+       
+         int ultimoCliente= 1;
+        Scanner ScanPago = new Scanner(System.in);
+        double ventasDia=0, totalpagar;
+        double sumdia= 0;
+       
+        do{
+         System.out.println("ingrese el monto total a pagar por cliente #"+ultimoCliente);
+         totalpagar = ScanPago.nextDouble();
+         
+         sumdia = sumdia + totalpagar;
+         
+            ultimoCliente++;
+         
+         System.out.println("Este es el ultimo cliente? Ingrese 1 para Si o 2 para No");
+            ultimoCliente = ScanPago.nextInt();
+            
+      } while (ultimoCliente ==2);
+      System.out.println("Las ventas totales del dia son: " + sumdia);
+}
+}
